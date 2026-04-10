@@ -11,75 +11,102 @@
       --card: #151b26;
       --text: #e8eaed;
       --muted: #9aa0a6;
-      --accent: #000000;
-      --border: rgba(255, 255, 255, 0.08);
+      --accent: #7dd3fc;
+      --accent-hover: #bae6fd;
+      --border: rgba(255, 255, 255, 0.1);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
     }
     @media (prefers-color-scheme: light) {
       :root {
-        --bg: #f6f8fb;
+        --bg: #f4f6f9;
         --card: #ffffff;
-        --text: #1a1d21;
-        --muted: #5f6368;
-        --border: rgba(0, 0, 0, 0.08);
+        --text: #111827;
+        --muted: #4b5563;
+        --accent: #0b57d0;
+        --accent-hover: #0842a0;
+        --border: rgba(0, 0, 0, 0.1);
+        --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
       }
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
+      font-size: 17px;
+      line-height: 1.7;
       background: var(--bg);
       color: var(--text);
-      padding: 24px 18px 48px;
+      padding: 28px 18px 56px;
+      -webkit-font-smoothing: antialiased;
     }
     .wrap {
       max-width: 720px;
       margin: 0 auto;
     }
     header {
-      padding: 28px 24px;
+      padding: 28px 26px;
       border-radius: 16px;
       background: var(--card);
       border: 1px solid var(--border);
-      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 32px;
+      border-top: 4px solid var(--accent);
     }
     h1 {
-      margin: 0 0 8px;
-      font-size: 1.55rem;
+      margin: 0 0 10px;
+      font-size: 1.65rem;
       font-weight: 700;
       letter-spacing: -0.02em;
+      line-height: 1.25;
     }
     .meta {
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      margin: 0 0 6px;
     }
+    .meta:last-of-type { margin-bottom: 0; }
     h2 {
-      font-size: 1.15rem;
-      margin: 32px 0 12px;
-      color: var(--accent);
-      font-weight: 800;
+      font-size: 1.2rem;
+      margin: 36px 0 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      font-weight: 700;
     }
-    p, ul { margin: 0 0 14px; }
-    ul { padding-left: 1.25rem; }
-    li { margin-bottom: 8px; }
+    h2:first-of-type { margin-top: 0; }
+    h3 {
+      font-size: 1.05rem;
+      margin: 24px 0 10px;
+      color: var(--accent);
+      font-weight: 700;
+    }
+    p, ul { margin: 0 0 16px; }
+    ul { padding-left: 1.35rem; }
+    li { margin-bottom: 10px; }
+    li:last-child { margin-bottom: 0; }
     a {
       color: var(--accent);
       text-decoration: underline;
       text-underline-offset: 3px;
-      font-weight: 800;
+      font-weight: 600;
     }
-    a:hover { opacity: 0.9; }
+    a:hover { color: var(--accent-hover); }
     .note {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: var(--muted);
-      padding: 14px 16px;
+      padding: 16px 18px;
       border-radius: 12px;
       border: 1px solid var(--border);
       background: var(--card);
-      margin: 20px 0;
+      margin: 24px 0;
+      line-height: 1.65;
     }
-    strong { font-weight: 800; }
+    strong { font-weight: 700; }
+    .lead {
+      font-size: 1.05rem;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -91,7 +118,7 @@
       <p class="meta">Last updated: <time datetime="2026-04-09">April 9, 2026</time></p>
     </header>
 
-    <p>
+    <p class="lead">
       This Privacy Policy explains how <strong>Ringtone Maker &amp; Music Editor</strong> handles information when you use the app.
       By using the app, you agree to this policy. If you do not agree, please do not use the app.
     </p>
@@ -121,14 +148,14 @@
 
     <h2>3. Information the App processes</h2>
 
-    <h2 style="font-size:1rem;margin-top:1.25rem;color:var(--text);">3.1 Information you provide</h2>
+    <h3>3.1 Information you provide</h3>
     <ul>
       <li><strong>URLs and content you choose:</strong> For example, a TikTok or video link you paste for analysis or download.</li>
       <li><strong>Files you select:</strong> Audio, video, or images you pick from your device for editing, conversion, mixing, or export.</li>
       <li><strong>Communications:</strong> If you email us (e.g. feedback), we receive the contents of your message and your email address.</li>
     </ul>
 
-    <h2 style="font-size:1rem;margin-top:1.25rem;color:var(--text);">3.2 Information collected automatically</h2>
+    <h3>3.2 Information collected automatically</h3>
     <ul>
       <li><strong>Advertising:</strong> Google’s advertising SDK may use identifiers (such as an advertising ID where permitted), device information, and ad interaction data to show and measure ads. See Google’s privacy documentation for details.</li>
       <li><strong>Network and diagnostics:</strong> Basic technical data may be processed when the App contacts servers (for example, when resolving a link or loading ads), including IP address and standard HTTP logs on third-party servers where applicable.</li>
@@ -225,7 +252,7 @@
       <a href="mailto:michealbright171189@gmail.com">michealbright171189@gmail.com</a>.
     </p>
 
-    <p class="note" style="margin-top:32px;">
+    <p class="note" style="margin-top: 32px;">
       This document is provided for general information and does not constitute legal advice. You may wish to have a lawyer review it for your jurisdiction and store listing requirements.
     </p>
   </div>
